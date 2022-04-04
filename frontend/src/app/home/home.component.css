@@ -1,0 +1,20 @@
+.mat-toolbar{
+	background-image: url("../../assets/img/toolbar.jpg");
+}
+
+.mat-toolbar{
+	position: fixed;
+	position: -webkit-sticky;
+	top: 0;
+	z-index: 1000;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.layout{
+	margin-left: 8px;
+	margin-right: 8px;
+	margin-top: 75px;
+}

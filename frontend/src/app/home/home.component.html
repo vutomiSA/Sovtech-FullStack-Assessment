@@ -1,0 +1,13 @@
+<mat-toolbar color="primary" class="mat-toolbar">
+	<span>{{title}}</span>
+    <span class="example-spacer"></span>
+</mat-toolbar>
+<div class="layout">
+	<mat-action-list role="list">
+		<mat-list-item *ngFor="let result of categories">
+			<mat-divider></mat-divider>
+			<div mat-line [routerLink]="['/details', result.name]">{{result.name}}</div>
+		</mat-list-item>
+	</mat-action-list>
+</div>
+
