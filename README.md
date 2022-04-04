@@ -7,7 +7,10 @@ This project consist of two parts:
   * Client Side - An Angular Single Page Application that consumes a REST API
 
 To run server:
+  * mvn spring-boot:run
   * open http://localhost:8010
 
 To run client app
+  * run npm install
+  * ng serve
   * open http://localhost:4200
