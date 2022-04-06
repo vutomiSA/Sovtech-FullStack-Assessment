@@ -12,7 +12,7 @@
 		<mat-card-title>{{categorydetails.id}}</mat-card-title>
 		<mat-card-subtitle>Created at {{categorydetails.created_at | date:"yyyy-MM-dd HH:mm:ss"}}</mat-card-subtitle>
 	  </mat-card-header>
-	  <img mat-card-image src="{{categorydetails.icon_url}}">
+	  <img mat-card-image src="{{categorydetails.icon_url}}" alt="{{categorydetails.icon_url}}">
 	  <mat-card-content>
 		<mat-card-subtitle>Updated at {{categorydetails.updated_at | date:"yyyy-MM-dd HH:mm:ss"}}</mat-card-subtitle>
 		<mat-card-title>{{categorydetails.value}}</mat-card-title>
