@@ -30,6 +30,6 @@ export class DetailsComponent implements OnInit {
   }
   
   back(){
-	  this.router.navigate(["./home"]);
+	  this.router.navigate(["./"]);
   }
 }
