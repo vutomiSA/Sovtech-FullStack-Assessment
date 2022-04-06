@@ -17,5 +17,6 @@ To run server:
 To run client app
   * type command - cd frontend  
   * run npm install
+  * run npm i @angular/material@10.2.7
   * ng serve
   * open http://localhost:4200
