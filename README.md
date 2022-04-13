@@ -9,14 +9,10 @@ This project consist of two parts:
 To download the source code run the following command
   * git clone https://github.com/vutomiSA/Sovtech-FullStack-Assessment.git
 
-To run server:
-  * type command - cd backend 
-  * mvn spring-boot:run
-  * open http://localhost:8010
-
-To run client app
-  * type command - cd frontend  
-  * run npm install
-  * run npm i @angular/material@10.2.7
-  * ng serve
-  * open http://localhost:4200
+Steps to run:
+  1. open root folder
+  2. type command - cd src/main/resources/frontend/angular
+  3. type command - npm install
+  4. navigate back to root folder
+  5. type command - mvn spring-boot:run
+  6. open http://localhost:8010 on web browser, e.g Google Chrome
