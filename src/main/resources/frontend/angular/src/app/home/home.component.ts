@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-
-import { CategoryDetails } from '../model/categorydetails.model';
-import { Category } from '../model/category.model';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ApiService } from '../providers/api.service';
 
 @Component({
@@ -15,16 +13,16 @@ export class HomeComponent implements OnInit {
   categories: any;
   title = "Categories"
   
-  constructor(private api: ApiService, private route: ActivatedRoute,
-				private router: Router){
-					
-  }
+  constructor(private api: ApiService,
+				private snackBar: MatSnackBar){}
 
   ngOnInit(): void {
-	this.api.getAllCategories().then(res => {
-		if(res != null){
-			this.categories = res;
-		}
-	});
+	this.api.getAllCategories()
+		.subscribe(data => {
+			this.categories = data;
+		},
+		error => {
+			this.snackBar.open(error.statusText, 'close');
+		});
   }
 }

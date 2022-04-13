@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-
-import { CategoryDetails } from '../../model/categorydetails.model';
-import { Category } from '../../model/category.model';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ApiService } from '../../providers/api.service';
 
 @Component({
@@ -11,22 +9,27 @@ import { ApiService } from '../../providers/api.service';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-  
-  categorydetails:any;
-  title:''
+
+  categorydetails = null;
+  title = ''
   
   constructor(private api: ApiService, private route: ActivatedRoute,
-				private router: Router){}
+				private router: Router,
+				private snackBar: MatSnackBar){}
 
   ngOnInit(): void {
-	let name = this.route.snapshot.params["name"];
+	let name = this.route.snapshot.paramMap.get('name');
 	this.title = name;
 	
-	this.api.getCategoryDetails(this.title).then(res => {
-		if(res != null){
-			this.categorydetails = res;
-		}
-	});
+	this.api.getCategoryDetails(this.title)
+		.subscribe(data => {
+			this.categorydetails = data;
+		},
+		error => {
+			this.snackBar.open(error.statusText, 'close');
+		});
+		
+		
   }
   
   back(){
