@@ -18,6 +18,9 @@ Steps to run:
   6. open http://localhost:8010 on web browser, e.g Google Chrome
 
 Screenshots:
+categories page
 ![image](https://user-images.githubusercontent.com/47109613/163192487-453d246f-7b9f-4a9b-81e0-a04eb7b88c2d.png)
+
+caregory details page
 ![image](https://user-images.githubusercontent.com/47109613/163192674-22ad8f50-0459-439a-b5e1-de1b656347a2.png)
 
