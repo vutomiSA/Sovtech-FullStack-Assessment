@@ -10,9 +10,9 @@ To download the source code run the following command
   * git clone https://github.com/vutomiSA/Sovtech-FullStack-Assessment.git
 
 Steps to run:
-  1. open root folder
+  1. open root folder (Sovtech-FullStack-Assessment)
   2. type command - cd src/main/resources/frontend/angular
   3. type command - npm install
-  4. navigate back to root folder
+  4. navigate back to root folder (Sovtech-FullStack-Assessment)
   5. type command - mvn spring-boot:run
   6. open http://localhost:8010 on web browser, e.g Google Chrome
