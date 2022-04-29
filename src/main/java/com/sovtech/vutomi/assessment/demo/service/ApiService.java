@@ -46,21 +46,14 @@ public class ApiService {
     }
     
     public CategoryDetails getCategoryDetails(String name){
-        CategoryDetails categoryDetails = new CategoryDetails();
+        CategoryDetails categoryDetails = null;
         
         String url = "https://api.chucknorris.io/jokes/random?category="+name;
         ResponseEntity<CategoryDetails> result = restTemplateBuilder.build()
                 .exchange(url, HttpMethod.GET, null,
                         new ParameterizedTypeReference<CategoryDetails>() {});
         
-        //categoryDetails = result.getBody();
-        categoryDetails.setId(result.getBody().getId());
-        categoryDetails.setCreated_at(result.getBody().getCreated_at());
-        categoryDetails.setIcon_url(result.getBody().getIcon_url());
-        categoryDetails.setUrl(result.getBody().getUrl());
-        categoryDetails.setUpdated_at(result.getBody().getUpdated_at());
-        categoryDetails.setValue(result.getBody().getValue());
-        categoryDetails.setCategories(result.getBody().getCategories());
+        categoryDetails = result.getBody();
         
         return categoryDetails;
     }
